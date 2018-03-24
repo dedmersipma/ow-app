@@ -1,0 +1,5 @@
+$ogu-primary: mat-palette($mat-indigo, 800, 300, 900);
+$ogu-accent: mat-palette($mat-light-blue);
+$ogu-warn: mat-palette($mat-pink, 600);
+
+$ogu-theme: mat-light-theme($ogu-primary, $ogu-accent, $ogu-warn);

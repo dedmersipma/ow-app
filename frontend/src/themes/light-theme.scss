@@ -1,0 +1,9 @@
+$ogu-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$ogu-light-accent: mat-palette($mat-brown, 200);
+$ogu-light-warn: mat-palette($mat-deep-orange, 200);
+
+$ogu-light-theme: mat-light-theme(
+  $ogu-light-primary,
+  $ogu-light-accent,
+  $ogu-light-warn
+);

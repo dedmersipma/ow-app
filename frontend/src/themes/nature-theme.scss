@@ -1,0 +1,9 @@
+$ogu-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$ogu-nature-accent: mat-palette($mat-deep-purple, 300);
+$ogu-nature-warn: mat-palette($mat-red, 600);
+
+$ogu-nature-theme: mat-light-theme(
+  $ogu-nature-primary,
+  $ogu-nature-accent,
+  $ogu-nature-warn
+);

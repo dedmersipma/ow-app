@@ -1,0 +1,42 @@
+<div class="background">
+  <div class="gradient">
+    <div class="container">
+      <h1>Overwatch Group-up</h1>
+      <div class="actions">
+        <a [ngClass]="animateOnRouteEnter" mat-raised-button class="actions-main" color="primary" routerLink="../features">
+          Build with
+        </a>
+        <a mat-raised-button class="actions-main" color="accent" routerLink="../examples" [ngClass]="animateOnRouteEnter">
+          Examples
+        </a>
+        <a mat-raised-button class="actions-main" color="warn" routerLink="../settings" [ngClass]="animateOnRouteEnter">
+          <i class="fa fa-gear"></i> Change Theme
+        </a>
+        <br>
+
+        <br>
+        <a mat-raised-button [ngClass]="animateOnRouteEnter" target="_blank" href="https://github.com/Fuyukai/OWAPI">
+          <i class="fa fa-medium"></i> OWAPI
+        </a>
+        <a mat-raised-button [ngClass]="animateOnRouteEnter" target="_blank" href="https://material.angular.io/">
+          <i class="fa fa-medium"></i> Angular Material
+        </a>
+        <a mat-raised-button [ngClass]="animateOnRouteEnter" target="_blank" href="https://overwatch-api.net/">
+          <i class="fa fa-medium"></i> Hero information
+        </a>
+        <a mat-raised-button [ngClass]="animateOnRouteEnter" target="_blank" href="https://github.com/geddski/overwatch-hero-picker">
+          <i class="fa fa-medium"></i> Hero Picker
+        </a>
+      </div>
+      <div class="get-started" [ngClass]="animateOnRouteEnter">
+        <h2>Getting started</h2>
+        <code>git clone
+          https://github.com/tomastrajan/angular-ngrx-material-starter.git
+          new-project</code><br>
+        <code>cd new-project</code><br>
+        <code>npm install</code><br>
+        <code>npm start</code>
+      </div>
+    </div>
+  </div>
+</div>

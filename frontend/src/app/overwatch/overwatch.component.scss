@@ -1,0 +1,366 @@
+/*=============================*\
+|           Game Info           |
+\*=============================*/
+
+.game-info {
+    display: flex;
+    grid-area: game-info;
+    justify-content: space-between;
+    padding: 5.1vh 3.4vh;
+}
+
+.game-info .side {
+    font-size: 15.5vh;
+    font-family: Overwatch;
+    font-style: italic;
+    color: transparent;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 10%, rgba(255,0,0,0.9));
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scaleX(1.02);
+    transform-origin: left;
+    padding-right: 2vw;
+}
+
+.game-info .map {
+    font-size: 4.5vh;
+    font-family: Overwatch;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    top: 15vh;
+    padding-left: 2.4vh;
+    transform: scaleX(1.05);
+    transform-origin: left;
+}
+
+.game-info .character .name {
+    font-size: 9.5vh;
+    font-family: Overwatch;
+    font-style: italic;
+    color: transparent;
+    background: linear-gradient(0deg, rgba(0,0,0,0), #fff 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 0.1vh rgba(0,0,0,0.3);
+    text-stroke: 0.1vh rgba(0,0,0,0.3);
+    padding-right: 2vh;
+    line-height: 96%;
+    text-align: right;
+    margin-top: 2.8vh;
+    filter: blur(0.08vh);
+}
+
+.game-info .character .info-btn {
+    height: 11.5%;
+    margin-right: 3vh;
+    float: right;
+    fill: rgba(127,217,250,1);
+    border-radius: 3%/5%;
+    filter: blur(0.6px);
+}
+.game-info .character .info-btn:hover {
+    fill: rgba(127,217,250,0.7);
+    box-shadow: 0 0 0.1vh 0.3vh #fff, inset 0 0 0 0.1vh #fff;
+}
+
+
+/*=============================*\
+|  Selected Heroes/Player Info  |
+\*=============================*/
+
+.selections {
+    grid-area: selections;
+    display: grid;
+    grid-template-columns: repeat(6, 7.5%);
+    justify-content: center;
+    grid-column-gap: 2.47%;
+}
+
+.selection::before {
+    position: absolute;
+    content: "";
+
+    width: 15vh;
+    height: 15vh;
+    background-size: 590%;
+    background-position: 49.6% 91.6%;
+    top: 52.3vh;
+    transform: translateX(-0.75vh);
+    opacity: 0.5;
+    filter: brightness(1.5);
+    z-index: -1;
+}
+
+.portrait {
+    height: 72%;
+
+    background-size: 700%;
+    background-position: 3.4% 0.5%;
+    text-align: center;
+}
+
+.portrait .bg-hex {
+    position: absolute;
+    top: 55.3vh;
+    transform: translateX(3vh);
+    width: 7.6vh;
+    height: calc(7.6vh * 0.5773);
+    background-color: #000;
+    margin: calc(7.6vh * 0.2886) 0;
+    box-shadow: 0 0 3vh 3vh rgba(135,206,250,0.2);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.portrait .bg-hex::before,
+.portrait .bg-hex::after {
+    content: "";
+    position: absolute;
+    width: calc(7.6vh * 0.7071);
+    height: calc(7.6vh * 0.7071);;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: calc(7.6vh * 0.1464);
+    box-shadow: 0 0 3vh 3vh rgba(135,206,250,0.2);
+}
+
+.portrait .bg-hex::before {
+    top: calc(7.6vh * -0.3536);
+}
+
+.portrait .bg-hex::after {
+    z-index: -1;
+    bottom: calc(7.6vh * -0.3536);
+}
+
+/*cover up extra shadows*/
+.portrait .bg-hex span {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 7.6vh;
+    height: calc(7.6vh * 0.5773);
+    background: inherit;
+}
+.portrait .bg-hex span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    border-left: calc(7.6vh * 0.5) solid transparent;
+    border-right: calc(7.6vh * 0.5) solid transparent;
+    bottom: 100%;
+    border-bottom: calc(7.6vh * 0.2886) solid #000;
+}
+
+.portrait .hero {
+    width: 100%;
+    height: 80%;
+    background-size: 530%;
+}
+
+.portrait .stars {
+    width: 100%;
+    height: 4.5vh;
+    transform: translateY(-1.1vh);
+
+    background-size: 700%;
+    background-position: 73.2% 17.05%;
+}
+
+.portrait .level {
+    display: inline-block;
+    padding: 0 0.8vh 0 1vh;
+    transform: translateY(-6vh);
+    background: linear-gradient(to bottom, #e1cec2 0%,#b58b73 50%,#844e42 63%,#a3614d 100%);
+    font-family: Kanit;
+    font-size: 1.7vh;
+    font-weight: bold;
+    letter-spacing: 0.3vh;
+    color: #fff;
+    border-radius: 0.4vh;
+    line-height: 2.2vh;
+    text-align: center;
+    box-shadow: 0 0 0 0.2vh rgba(0,0,0,0.6);
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-info .name {
+    font-family: Overwatch;
+    font-style: italic;
+    font-size: 3vh;
+    color: #52f7ff;
+}
+
+.player-info .dropdown {
+    width: 1.85vh;
+    height: 1.85vh;
+    border: 0.2vh solid rgba(255,255,255,0.6);
+    border-radius: 100%;
+    margin: 0 4%;
+    display: flex;
+    justify-content: center;
+    transform: scale(-1);
+}
+
+.player-info .dropdown::after {
+    content: "^";
+    font-family: Overwatch;
+    font-size: 3vh;
+    color: #fff;
+    transform: scaleY(1.4) translate(0.05vh,-0.05vh);
+}
+
+.player-info .dropdown:hover {
+    transform: scale(-1.25);
+    border: 0.2vh solid rgba(255,255,255,1);
+}
+
+.player-info .dropdown:hover::after {
+    transform: scaleX(0.8) translate(0.05vh,-0.05vh);
+}
+
+.hero-pose {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    visibility: hidden;
+}
+
+
+/*=============================*\
+|         Hero Selection        |
+\*=============================*/
+
+.hero-select {
+    grid-area: hero-select;
+    display: grid;
+    grid-template-columns: 27% 20.3% 20.4% 17%;
+    grid-column-gap: 3.65%;
+    padding-left: 5.5%;
+}
+
+.role {
+    display: flex;
+    margin-top: 2.5vh;
+}
+.role .icon  {
+    position: absolute;
+    box-shadow: 0 0 0 0.15vh rgba(255,255,255,0.5);
+    border-radius: 100%;
+    height: 3.4vh;
+    width: 3.4vh;
+    transform: translate(-4.6vh, 1.2vh);
+    fill: #fff;
+}
+.role .icon svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.role .icon:hover {
+    box-shadow: 0 0 0 0.3vh rgba(255,255,255,1);
+    background-color: rgba(0,0,0,0.4);
+}
+.role .icon:hover::before {
+    content: "";
+    position: relative;
+    display: block;
+    bottom: 2.9vh;
+    left: 3.2vh;
+    width: 1.1vh;
+    height: 2.2vh;
+    border-top: 0.2vh solid #fff;
+    border-left: 0.2vh solid #fff;
+    border-top-left-radius: 80% 40%;
+    transform: skewX(-30deg) rotate(-10deg);
+}
+.role .icon:hover::after {
+    position: relative;
+    font-family: Asap;
+    font-weight: 400;
+    font-size: 1.85vh;
+    color: #fff;
+    bottom: 6.3vh;
+    left: 5.2vh;
+}
+
+.role[role=offense] .icon:hover::after { content: "OFFENSE"; }
+.role[role=defense] .icon:hover::after { content: "DEFENSE"; }
+.role[role=tank] .icon:hover::after { content: "TANK"; }
+.role[role=support] .icon:hover::after { content: "SUPPORT"; }
+
+.option {
+    width: 4.75vh;
+    height: 7vh;
+    margin-right: 0.76vh;
+    transform: skewX(-15deg);
+    overflow: hidden;
+    background: rgba(0,0,0,0.5);
+    transform-origin: bottom left;
+    border-radius: 10%;
+    box-shadow: 0 0.2vh 0 0 #fff, 0 -0.4vh 0 0 #fff;
+    transition: 0.1s;
+}
+
+.option img {
+    position: relative;
+    height: 100%;
+    transform: skewX(15deg);
+    transform-origin: bottom left;
+}
+
+.option:hover {
+    transform: scale(1.1) skewX(-15deg) translate(-0.25vh, 0.25vh);
+    box-shadow: 0 0 0.02vh 0.4vh #fff;
+    transition: none;
+    
+}
+
+
+/*=============================*\
+|         Confirm Button        |
+\*=============================*/
+
+.confirm-btn {
+    grid-area: confirm-btn;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-btn button {
+    height: 51%;
+    margin-top: 1vh;
+    border: none;
+    background: rgba(231,166,59,0.8);
+    border-radius: 0.3vh;
+}
+
+.confirm-btn button span {
+    display: block;
+    color: #fff;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+    display: block;
+    letter-spacing: 0.1vh;
+    transform: scaleX(0.9);
+    padding: 0 3vh;
+}
+
+.confirm-btn button:hover {
+    background: rgba(231,166,59,0.5);
+    box-shadow: 0 0 0.2vh 0.2vh #fff, inset 0 0 0.1vh 0.1vh #fff;
+}

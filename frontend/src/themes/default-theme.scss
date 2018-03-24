@@ -1,0 +1,9 @@
+$ogu-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$ogu-black-accent: mat-palette($mat-blue-grey, 400);
+$ogu-black-warn: mat-palette($mat-red, 500);
+
+$ogu-black-theme: mat-dark-theme(
+  $ogu-black-primary,
+  $ogu-black-accent,
+  $ogu-black-warn
+);

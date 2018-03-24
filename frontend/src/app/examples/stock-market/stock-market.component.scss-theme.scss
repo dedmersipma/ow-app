@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+@mixin ogu-stock-market-component-theme($theme) {
+  $warn: map-get($theme, warn);
+
+  ogu-stock-market {
+    mat-card {
+      span {
+        &.negative {
+          color: mat-color($warn);
+        }
+      }
+    }
+
+    .error {
+      i {
+        color: mat-color($warn);
+      }
+    }
+  }
+}
