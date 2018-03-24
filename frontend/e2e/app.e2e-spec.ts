@@ -1,14 +1,14 @@
-import { AngularNgrxMaterialStarterPage } from './app.po';
+import { AngularOverwatchApp } from './app.po';
 
-describe('angular-ngrx-material-starter App', () => {
-  let page: AngularNgrxMaterialStarterPage;
+describe('Overwatch Group Up', () => {
+  let page: AngularOverwatchApp;
 
   beforeEach(() => {
-    page = new AngularNgrxMaterialStarterPage();
+    page = new AngularOverwatchApp();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ANGULAR NGRX MATERIAL STARTER');
+    expect(page.getParagraphText()).toEqual('OVERWATCH GROUP UP');
   });
 });

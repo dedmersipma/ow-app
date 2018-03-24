@@ -29,7 +29,7 @@ export class TodosComponent implements OnInit, OnDestroy {
   todos: any;
   newTodo = '';
 
-  constructor(public store: Store<any>, public snackBar: MatSnackBar) {}
+  constructor(public store: Store<any>, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.store

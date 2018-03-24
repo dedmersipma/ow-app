@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SettingsComponent } from './settings';
 
+import { OverwatchComponent } from './overwatch-select';
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +21,13 @@ const routes: Routes = [
   {
     path: 'examples',
     loadChildren: 'app/examples/examples.module#ExamplesModule'
+  },
+  {
+    path: 'overwatch',
+    component: OverwatchComponent,
+    data: {
+      title: 'Overwatch'
+    }
   },
   {
     path: '**',

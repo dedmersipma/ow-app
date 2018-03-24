@@ -7,7 +7,7 @@ import { CoreModule } from '@app/core';
 import { OverwatchComponent } from './overwatch.component';
 
 describe('overwatchComponent', () => {
-  let component: overwatchComponent;
+  let component: OverwatchComponent;
   let fixture: ComponentFixture<OverwatchComponent>;
 
   beforeEach(

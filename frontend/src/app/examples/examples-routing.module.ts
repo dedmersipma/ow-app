@@ -5,8 +5,6 @@ import { AuthGuardService } from '@app/core';
 
 import { ExamplesComponent } from './examples/examples.component';
 import { TodosComponent } from './todos/todos.component';
-import { StockMarketComponent } from './stock-market/stock-market.component';
-import { ParentComponent } from './theming/parent/parent.component';
 import { AuthenticatedComponent } from './authenticated/authenticated.component';
 
 const routes: Routes = [
@@ -25,21 +23,8 @@ const routes: Routes = [
         data: {
           title: 'Todos'
         }
-      },
-      {
-        path: 'stock-market',
-        component: StockMarketComponent,
-        data: {
-          title: 'Stock Market'
-        }
-      },
-      {
-        path: 'theming',
-        component: ParentComponent,
-        data: {
-          title: 'Theming'
-        }
-      },
+      }
+      ,
       {
         path: 'authenticated',
         component: AuthenticatedComponent,
@@ -56,4 +41,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ExamplesRoutingModule {}
+export class ExamplesRoutingModule { }

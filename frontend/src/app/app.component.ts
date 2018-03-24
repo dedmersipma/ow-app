@@ -38,7 +38,8 @@ export class AppComponent implements OnInit, OnDestroy {
     { link: 'about', label: 'About' },
     { link: 'features', label: 'Features' },
     { link: 'examples', label: 'Examples' },
-    { link: 'overwatch', label: 'Overwatch' },
+    { link: 'overwatch', label: 'Overwatch' }
+
   ];
   navigationSideMenu = [
     ...this.navigation,

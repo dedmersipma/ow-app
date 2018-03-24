@@ -7,6 +7,7 @@ import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
 import { StaticModule } from './static';
+import { OverwatchModule } from './overwatch-select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { AppComponent } from './app.component';
     // features
     StaticModule,
     SettingsModule,
+    OverwatchModule,
 
     // app
     AppRoutingModule
@@ -32,4 +34,4 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

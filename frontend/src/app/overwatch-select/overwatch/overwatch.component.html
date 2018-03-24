@@ -11,29 +11,8 @@
                 <path class="cls-1" d="M-2529.85,130.43c-47.9,21.52-102,110.25-102,166.61V880.17h204.1V297C-2427.8,240.68-2481.25,154-2529.85,130.43Z" transform="translate(2935.96 -130.43)"/>
             </svg>
     </div>
-    <div class="option">
-      <img [src]="doomfist">
-    </div>
-    <div class="option">
-      <img [src]="genji">
-    </div>
-    <div class="option">
-      <img [src]="mccree">
-    </div>
-    <div class="option">
-      <img [src]="pharah">
-    </div>
-    <div class="option">
-      <img [src]="reaper">
-    </div>
-    <div class="option">
-      <img [src]="soldier">
-    </div>
-    <div class="option">
-      <img [src]="sombra">
-    </div>
-    <div class="option">
-      <img [src]="tracer">
+    <div *ngFor="let hero of getAttackHeroes" class="option" [ngClass]="animateOnRouteEnter">
+      <img src="{{hero.image}}" (click)="onToggleHero(hero)" />
     </div>
   </div>
   <div class="role" role="defense">
@@ -44,23 +23,8 @@
                 <path class="cls-1" d="M-976.91-598.85H-582.6a77.06,77.06,0,0,0,77.06-77.06v-189A48.42,48.42,0,0,0-554-913.32h-24.12a22.56,22.56,0,0,0-22.56,22.56v53.28a10.93,10.93,0,0,1-10.93,10.93h-63.17a10.93,10.93,0,0,1-10.93-10.93V-879a34.36,34.36,0,0,0-34.36-34.36h-120.1A34.36,34.36,0,0,0-874.52-879v41.48a10.93,10.93,0,0,1-10.93,10.93h-62.48a10.93,10.93,0,0,1-10.93-10.93v-53.28a22.56,22.56,0,0,0-22.56-22.56h-24.12A48.42,48.42,0,0,0-1054-864.9v189A77.06,77.06,0,0,0-976.91-598.85Z" transform="translate(1143.87 913.32)"/>
             </svg>
     </div>
-    <div class="option">
-      <img [src]="bastion">
-    </div>
-    <div class="option">
-      <img [src]="hanzo">
-    </div>
-    <div class="option">
-      <img [src]="junkrat">
-    </div>
-    <div class="option">
-      <img [src]="mei">
-    </div>
-    <div class="option">
-      <img [src]="torbjorn">
-    </div>
-    <div class="option">
-      <img [src]="widowmaker">
+    <div *ngFor="let hero of getDefendsHeroes" class="option" [ngClass]="animateOnRouteEnter">
+      <img src="{{hero.image}}" (click)="onToggleHero(hero)" />
     </div>
   </div>
   <div class="role" role="tank">
@@ -70,23 +34,8 @@
                 <path class="cls-1" d="M498.89,4C743,4,902.81,70.56,902.81,141.58V530.49C902.81,621,598.76,996,498.89,996S97.19,624.22,97.19,530.49V139.36C97.19,72.78,254.76,4,498.89,4Z" transform="translate(-97.19 -3.98)"/>
             </svg>
     </div>
-    <div class="option">
-      <img [src]="dva">
-    </div>
-    <div class="option">
-      <img [src]="orisa">
-    </div>
-    <div class="option">
-      <img [src]="reinhardt">
-    </div>
-    <div class="option">
-      <img [src]="roadhog">
-    </div>
-    <div class="option">
-      <img [src]="winston">
-    </div>
-    <div class="option">
-      <img [src]="zarya">
+    <div *ngFor="let hero of getTankHeroes" class="option" [ngClass]="animateOnRouteEnter">
+      <img src="{{hero.image}}" (click)="onToggleHero(hero)" />
     </div>
   </div>
   <div class="role" role="support">
@@ -96,20 +45,8 @@
                 <path class="cls-1" d="M-960.88,803.81h-195.77a11.11,11.11,0,0,1-11.11-11.11V596.93a68,68,0,0,0-68-68h-179.1a68,68,0,0,0-68,68V792.7A11.11,11.11,0,0,1-1494,803.81H-1689.8a68,68,0,0,0-68,68v179.1a68,68,0,0,0,68,68H-1494a11.11,11.11,0,0,1,11.11,11.11v195.77a68,68,0,0,0,68,68h179.1a68,68,0,0,0,68-68V1130.08a11.11,11.11,0,0,1,11.11-11.11h195.77a68,68,0,0,0,68-68V871.84A68,68,0,0,0-960.88,803.81Z" transform="translate(1757.83 -528.9)"/>
             </svg>
     </div>
-    <div class="option">
-      <img [src]="ana">
-    </div>
-    <div class="option">
-      <img [src]="lucio">
-    </div>
-    <div class="option">
-      <img [src]="mercy">
-    </div>
-    <div class="option">
-      <img [src]="symmetra">
-    </div>
-    <div class="option">
-      <img [src]="zenyatta">
+    <div *ngFor="let hero of getSupportHeroes" class="option" [ngClass]="animateOnRouteEnter">
+      <img src="{{hero.image}}" (click)="onToggleHero(hero)" />
     </div>
   </div>
 </div>
