@@ -1,4 +1,4 @@
-<div class="hero-select">
+<div class="hero-select row h-100">
   <div class="role" role="offense">
     <div class="icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-560 -500 1900 1900">
@@ -49,4 +49,24 @@
       <img src="{{hero.image}}" (click)="onToggleHero(hero)" />
     </div>
   </div>
+</div>
+<div class="selected-heroes row">
+
+  <mat-card *ngFor="let hero of selectedHeroes" class="hero-card" [ngClass]="animateOnRouteEnter">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{hero.name}}</mat-card-title>
+      <mat-card-subtitle>{{hero.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{hero.image}}" alt="Photo of a {{hero.name}}">
+    <mat-card-content>
+      <p>
+        Lorem ipsum.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+    </mat-card-actions>
+  </mat-card>
+
 </div>

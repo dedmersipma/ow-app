@@ -43,6 +43,12 @@ export class OverwatchComponent implements OnInit, OnDestroy {
     this.unsubscribe$.complete();
   }
 
+  get selectedHeroes() {
+    const filter = 'DONE';
+    const predicate = filter === 'DONE' ? t => t.done : t => !t.done;
+    return this.heroes.items.filter(predicate);
+  }
+
   get filteredHeroes() {
     const filter = this.heroes.filter;
     if (filter === 'ALL') {

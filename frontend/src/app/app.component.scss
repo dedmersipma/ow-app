@@ -67,6 +67,9 @@ mat-sidenav-container {
       padding-top: 64px;
       flex: 1 0 auto;
       position: relative;
+      
+      background: url('../assets/overwatch/backgrounds/genji-background.jpg') no-repeat center top;
+
     }
 
     @media (max-width: map-get($grid-breakpoints, sm)) {
